@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
     self.title = @"我的应用";
     UIButton * clickBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     clickBtn.bounds = CGRectMake(0, 0, 50, 50);

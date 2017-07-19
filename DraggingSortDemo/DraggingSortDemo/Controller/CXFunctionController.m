@@ -127,6 +127,7 @@
     
     CXFunctionCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DargSortCell" forIndexPath:indexPath];
     cell.delegate = self;
+    cell.functionImg.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",indexPath.row]];
     if (indexPath.section == 0) {
         cell.subscribe = [CXFunctionManager shareInstance].myFunctionArray[indexPath.row];
         cell.isMyapp = YES;
@@ -134,7 +135,6 @@
         cell.subscribe = [CXFunctionManager shareInstance].otherFunctionArray[indexPath.row];
         cell.isMyapp = NO;
     }
-    cell.backgroundColor = [UIColor redColor];
     return cell;
 }
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
@@ -144,7 +144,6 @@
         [headerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
         UILabel * titleLabel = [[UILabel alloc]init];
         titleLabel.frame = CGRectMake(5, 0, CGRectGetWidth(self.view.frame), 30);
-        titleLabel.backgroundColor = [UIColor yellowColor];
         if (indexPath.section == 0) {
             titleLabel.text = @"   我的应用";
         }else {

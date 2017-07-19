@@ -36,16 +36,14 @@
 //    UIPanGestureRecognizer * pan =[[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(gestureAction:)];
 //    pan.delegate = self;
 //    [self addGestureRecognizer:pan];
-
+    self.backgroundColor = [UIColor yellowColor];
     _functionImg = [[UIImageView alloc] initWithFrame:
                                   CGRectMake(0, 0, 42, 42)];
     _functionImg.center  = self.contentView.center;
-    _functionImg.backgroundColor = [UIColor orangeColor];
     [self.contentView addSubview:_functionImg];
     
     _functionLab = [[UILabel alloc] init];
     _functionLab.textColor = [UIColor blackColor];
-    _functionLab.backgroundColor = [UIColor magentaColor];
     _functionLab.textAlignment = NSTextAlignmentCenter;
     _functionLab.font = [UIFont systemFontOfSize:15];
     _functionLab.left = 0;
